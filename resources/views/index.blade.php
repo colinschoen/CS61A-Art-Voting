@@ -14,12 +14,11 @@
                 <span style="font-style: italic;"><a href="#footer" class="scrolly">(Voting form is located after all images)</a></span>
             </p>
         </div>
-        <a href="#two" class="goto-next scrolly">Next</a>
+        <a href="#sectionInfo" class="goto-next scrolly">Next</a>
     </div>
 </section>
 
-<!-- One -->
-<section id="one" class="main special">
+<section id="sectionInfo" class="main special">
     <div class="container">
         <span class="image fit primary"><img src="images/bg.jpg" alt="" /></span>
         <div class="content">
@@ -32,12 +31,13 @@
                 <p><strong>No entries :(</strong></p>
             @endif
         </div>
-        <a href="#two" class="goto-next scrolly">Next</a>
     </div>
 </section>
 
+<?php $i = 0; ?>
+
 @foreach ($feathers as $feather)
-<section id="a{{{$feather->id}}}" class="main special">
+<section id="a{{{ $i }}}" class="main special">
     <div class="container">
         <div class="content">
             <header class="major">
@@ -46,15 +46,21 @@
             <img style="max-width:100%;" src="/artwork/{{{ $feather->image }}}">
             <br />
             <pre>{{{ $feather->body }}}</pre>
+            <div class="radio">
+                <label>
+                    <input type="radio" name="inputFeather" value="{{{ $feather->id }}}" /> <i class="fa fa-hand-o-up fa-fw"></i> Feather Weight Vote
+                </label>
+            </div>
+
         </div>
-        <a href="#" class="goto-next scrolly">Next</a>
+        <a href="#a{{{ $i + 1 }}}" class="goto-next scrolly">Next</a>
     </div>
 </section>
+<?php $i += 1 ?>
 @endforeach
 
 
-<!-- One -->
-<section id="one" class="main special">
+<section id="sectionHeavyInfo" class="main special">
     <div class="container">
         <span class="image fit primary"><img src="images/bg.jpg" alt="" /></span>
         <div class="content">
@@ -67,12 +73,12 @@
                 <p><strong>No entries :(</strong></p>
             @endif
         </div>
-        <a href="#two" class="goto-next scrolly">Next</a>
     </div>
 </section>
 
+<?php $i = 0; ?>
 @foreach ($heavies as $heavy)
-    <section id="a{{{$heavy->id}}}" class="main special">
+    <section id="a{{{$i}}}" class="main special">
         <div class="container">
             <div class="content">
                 <header class="major">
@@ -81,9 +87,15 @@
                 <img style="max-width:100%;" src="/artwork/{{{ $heavy->image }}}">
                 <br />
                 <pre>{{{ $heavy->body }}}</pre>
+                <div class="radio">
+                    <label>
+                        <input type="radio" name="inputHeavy" value="{{{ $heavy->id }}}" /> <i class="fa fa-hand-o-up fa-fw"></i> Heavy Weight Vote
+                    </label>
+                </div>
             </div>
-            <a href="#" class="goto-next scrolly">Next</a>
+            <a href="#a{{{ $i + 1  }}}" class="goto-next scrolly">Next</a>
         </div>
     </section>
+<?php $i += 1; ?>
 @endforeach
 @include('core.footer')

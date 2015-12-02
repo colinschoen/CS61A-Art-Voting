@@ -11,7 +11,10 @@
 |
 */
 
+//GET
 Route::get('/', ["as" => "index", "uses" => "IndexController@get_index"]);
+//POST
+Route::post('/', ["as" => "submitvote", "uses" => "IndexController@post_submit_vote"]);
 
 
 //Admin Routes

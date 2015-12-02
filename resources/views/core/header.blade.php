@@ -14,7 +14,11 @@
 
 <section id="header">
     <header class="major">
-        <h1 class="text-shadow">Scheme Recursive Art Contest</h1>
+        <h1 class="text-shadow">Scheme Recursive Art Contest <br />
+       <small>
+           <strong><a href="http://github.com/colinschoen/CS61A-Art-Voting" target="_blank" class="icon alt fa-github"><span class="label">Github</span></a></strong>
+       </small>
+        </h1>
         <p><a href="http://cs61a.org">CS61A</a></p>
     </header>
     <div class="container">

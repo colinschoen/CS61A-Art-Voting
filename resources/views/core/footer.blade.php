@@ -27,11 +27,7 @@
     </div>
     <footer>
         <ul class="icons">
-            <li><a href="#" class="icon alt fa-twitter"><span class="label">Twitter</span></a></li>
-            <li><a href="#" class="icon alt fa-facebook"><span class="label">Facebook</span></a></li>
-            <li><a href="#" class="icon alt fa-instagram"><span class="label">Instagram</span></a></li>
-            <li><a href="#" class="icon alt fa-dribbble"><span class="label">Dribbble</span></a></li>
-            <li><a href="#" class="icon alt fa-envelope"><span class="label">Email</span></a></li>
+            <strong><li><a href="http://github.com/colinschoen/CS61A-Art-Voting" target="_blank" class="icon alt fa-github"><span class="label">Github</span></a></li></strong>
         </ul>
         <ul class="copyright">
             <strong><li>&copy; CS61A @ UC Berkeley</li><li>Design Adapted From HTML5 UP</li></strong>

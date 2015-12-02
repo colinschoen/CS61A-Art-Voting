@@ -11,9 +11,12 @@
 |
 */
 
-Route::get('/', 'WelcomeController@index');
+Route::get('/', ["as" => "index", "uses" => "IndexController@get_index"]);
 
-Route::get('home', 'HomeController@index');
+
+//Admin Routes
+Route::get('admin', ["as" => "admin", "uses" => "AdminController@get_admin"]);
+
 
 Route::controllers([
 	'auth' => 'Auth\AuthController',

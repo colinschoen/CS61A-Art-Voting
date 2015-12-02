@@ -29,8 +29,8 @@ class AdminController extends Controller {
      */
     public function get_admin()
     {
-        $entries = Entry::orderBy("category", "ASC");
-        return view('admin')->with(["entries" => $entries]);
+        $entries = Entry::orderBy("category", "ASC")->get();
+        return view('admin.index')->with(["entries" => $entries]);
     }
 
     public function post_entry_new() {
@@ -41,10 +41,12 @@ class AdminController extends Controller {
             "email" => $input["inputEmail"],
             "category" => $input["inputCategory"],
             "image" => $image,
+            "title" => $input["inputTitle"],
         ], [
             "email" => "required|email",
             "category" => "required|in:0,1",
             "image" => "required|image",
+            "title" => "required",
         ]);
         //Run our validator
         if ($validator->fails())
@@ -55,12 +57,15 @@ class AdminController extends Controller {
         $entry = new Entry;
         $entry->email = $input["inputEmail"];
         $entry->category = $input["inputCategory"];
-        $imageExtension = $image->getClientOriginalExtension();
-        $entry->image = $id . "." . $imageExtension;
+        $entry->title = $input["inputTitle"];
+        $entry->body = $input["inputBody"];
         //Save our new checkin
         $entry->save();
-        //Use our ID as our image name
         $id = $entry->id;
+        $imageExtension = $image->getClientOriginalExtension();
+        $entry->image = $id . "." . $imageExtension;
+        $entry->save();
+        //Use our ID as our image name
         //We need to retain the original extension the user used.
         $image->move(public_path() . "/artwork", $entry->image);
         return redirect()->route("adminresults")->with("message", "Entry added successfully.");

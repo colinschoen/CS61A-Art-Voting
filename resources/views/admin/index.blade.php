@@ -9,7 +9,7 @@
     </div>
 
     <div class="row">
-        <div class="col-lg-6">
+        <div class="col-lg-12">
             <div class="well">
                 <form action="{{ route("adminresultnew") }}" method="POST" enctype="multipart/form-data" class="form-horizontal">
                     <input type="hidden" name="_token" value="{{ csrf_token() }}" />
@@ -20,6 +20,18 @@
                                 <label for="inputEmail" class="col-lg-2 control-label">Email</label>
                                 <div class="col-lg-10">
                                     <input type="text" class="form-control" id="inputEmail" name="inputEmail" placeholder="Email" />
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="inputTitle" class="col-lg-2 control-label">Title</label>
+                                <div class="col-lg-10">
+                                    <input type="text" class="form-control" id="inputTitle" name="inputTitle" placeholder="Title" />
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="inputBody" class="col-lg-2 control-label">Body</label>
+                                <div class="col-lg-10">
+                                    <textarea class="form-control" name="inputBody" placeholder="Body" id="inputBody"></textarea>
                                 </div>
                             </div>
                             <div class="form-group">
@@ -58,7 +70,33 @@
         </div>
     </div>
     <div class="row">
-
+        <div class="col-lg-12">
+            <table class="table table-striped table-hover ">
+                <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Email</th>
+                    <th>Title</th>
+                    <th>Body</th>
+                    <th>Category</th>
+                    <th>Image</th>
+                    <th>Created At</th>
+                </tr>
+                </thead>
+                <tbody>
+                @foreach ($entries as $entry)
+                <tr><td>{{{ $entry->id }}}</td>
+                    <td>{{{ $entry->email }}}</td>
+                    <td>{{{ $entry->title }}}</td>
+                    <td>{{{ $entry->body }}}</td>
+                    <td>@if ($entry->category == 0) Feather Weight @else Heavy Weight @endif</td>
+                    <td><a href="/artwork/{{{ $entry->image }}}" target="_blank">{{{ route("index") }}}/artwork/{{{ $entry->image }}}</a></td>
+                    <td>{{{ $entry->created_at }}}</td>
+                </tr>
+                @endforeach
+                </tbody>
+            </table>
+        </div>
     </div>
 
 

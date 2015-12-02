@@ -29,9 +29,9 @@ class IndexController extends Controller {
      */
     public function get_index()
     {
-        $feather = Entry::where("category", "=", "0")->get();
-        $heavy = Entry::where("category", "=", "1")->get();
-        return view("index")->with(["feather" => $feather, "heavy" => $heavy]);
+        $feathers = Entry::where("category", "=", "0")->get();
+        $heavies = Entry::where("category", "=", "1")->get();
+        return view("index")->with(["feathers" => $feathers, "heavies" => $heavies]);
     }
 
 }

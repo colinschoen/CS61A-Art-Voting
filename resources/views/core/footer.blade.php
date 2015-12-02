@@ -1,20 +1,11 @@
 <!-- Footer -->
 <section id="footer">
-    <div class="container">
-        <header class="major">
+    <div class="container"> <header class="major">
             <h2>Vote!</h2>
         </header>
         <form method="post" action="#">
             <div class="row uniform">
-                <div class="12u$">
-                    Heavy Weight
-                    <hr />
-                </div>
-                <div class="12u$">
-                    Feather Weight
-                    <hr />
-                </div>
-                <div class="12u$(large)">
+               <div class="12u$(large)">
                     <input type="email" name="email" id="email" placeholder="OK Email" />
                 </div>
                 <div class="12u$">

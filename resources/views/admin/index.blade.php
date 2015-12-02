@@ -12,8 +12,8 @@
         <div class="col-lg-12">
             <div class="well">
                 <form action="{{ route("adminresultnew") }}" method="POST" enctype="multipart/form-data" class="form-horizontal">
-                    <input type="hidden" name="_token" value="{{ csrf_token() }}" />
                     <fieldset>
+                        <input type="hidden" name="_token" value="{{ csrf_token() }}" />
                         <legend>Add Entry <span style="float: right;"><a id="btnToggleAddEntry" href="#"><i class="fa fa-plus fa-fw"></i></a></span></legend>
                         <div id="addEntryDivBody" style="display: none;">
                             <div class="form-group">

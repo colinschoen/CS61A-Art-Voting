@@ -2,7 +2,6 @@
 <!-- Voting -->
 <section id="voting" class="main special">
     <div class="container">
-        <span class="image fit primary"><img src="images/bg.jpg" alt="" /></span>
         <div class="content">
             <header class="major">
                 <h2>Voting</h2>
@@ -20,7 +19,6 @@
 
 <section id="sectionInfo" class="main special">
     <div class="container">
-        <span class="image fit primary"><img src="images/bg.jpg" alt="" /></span>
         <div class="content">
             <header class="major">
                 <h2>Feather Weight</h2>
@@ -62,7 +60,6 @@
 
 <section id="sectionHeavyInfo" class="main special">
     <div class="container">
-        <span class="image fit primary"><img src="images/bg.jpg" alt="" /></span>
         <div class="content">
             <header class="major">
                 <h2>Heavy Weight</h2>

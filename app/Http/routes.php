@@ -16,6 +16,8 @@ Route::get('/', ["as" => "index", "uses" => "IndexController@get_index"]);
 
 //Admin Routes
 Route::get('admin', ["as" => "admin", "uses" => "AdminController@get_admin"]);
+Route::get('admin/entries', ["as" => "adminentries", "uses" => "AdminController@get_admin"]);
+Route::get('admin/results', ["as" => "adminresults", "uses" => "AdminController@get_admin"]);
 
 
 Route::controllers([

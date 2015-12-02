@@ -47,6 +47,8 @@
 <script src="/js/util.js"></script>
 <!--[if lte IE 8]><script src="/js/ie/respond.min.js"></script><![endif]-->
 <script src="/js/main.js"></script>
-
+$(function() {
+    @yield('js')
+});
 </body>
 </html>

@@ -9,7 +9,7 @@ class Entry extends Model {
 	 *
 	 * @var string
 	 */
-	protected $table = 'entries';
+	protected $table = 'submissions';
 
     public function votes() {
         return $this->hasMany('App\Vote', 'entry', 'id');

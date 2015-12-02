@@ -43,3 +43,14 @@
     </div>
 </div>
 <div class="container">
+    @if (count($errors) > 0)
+        <div class="row">
+            <div class="col-lg-12">
+                @foreach ($errors->all() as $error)
+                    <div class="alert alert-danger">
+                        {{ $error }}
+                    </div>
+                @endforeach
+            </div>
+        </div>
+@endif

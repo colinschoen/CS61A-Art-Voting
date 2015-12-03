@@ -28,6 +28,7 @@
 
 <!-- Scripts -->
 <script src="/js/jquery.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery.lazy/0.6.4/jquery.lazy.min.js"></script>
 <script src="/js/jquery.scrollex.min.js"></script>
 <script src="/js/jquery.scrolly.min.js"></script>
 <script src="/js/skel.min.js"></script>
@@ -36,6 +37,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.js"></script>
 <script src="/js/main.js"></script>
 <script>$(function() {
+    $('.lazy').lazy();
     $('#submitVoteBtn').on('click', function(e) {
         e.preventDefault();
         $(this).attr("disabled", true);

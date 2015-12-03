@@ -41,7 +41,7 @@
             <header class="major">
                 <h3>{{{ $feather->title }}}</h3>
             </header>
-            <img style="max-width:100%;" src="/artwork/{{{ $feather->image }}}">
+            <img class="lazy" style="max-width:100%;" data-src="/artwork/{{{ $feather->image }}}">
             <br />
             <pre>{{{ $feather->body }}}</pre>
             <div class="radio">
@@ -81,7 +81,7 @@
                 <header class="major">
                     <h3>{{{ $heavy->title }}}</h3>
                 </header>
-                <img style="max-width:100%;" src="/artwork/{{{ $heavy->image }}}">
+                <img class="lazy" style="max-width:100%;" data-src="/artwork/{{{ $heavy->image }}}">
                 <br />
                 <pre>{{{ $heavy->body }}}</pre>
                 <div class="radio">

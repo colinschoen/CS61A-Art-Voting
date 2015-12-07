@@ -22,7 +22,7 @@ Route::post('/', ["as" => "submitvote", "uses" => "IndexController@post_submit_v
 //    Route::get('admin', ["as" => "admin", "uses" => "AdminController@get_admin"]);
 //    Route::get('admin/entries', ["as" => "adminentries", "uses" => "AdminController@get_admin"]);
 //    Route::get('admin/results', ["as" => "adminresults", "uses" => "AdminController@get_admin"]);
-//    //POST
+    //POST
 //    Route::post('admin/entries/new', ["as" => "adminresultnew", "uses" => "AdminController@post_entry_new"]);
 
 

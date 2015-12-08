@@ -82,7 +82,7 @@
 
 <?php $i = 0; ?>
 @foreach ($heavies as $heavy)
-    <section id="a{{{$i}}}" class="main special">
+    <section id="b{{{$i}}}" class="main special">
         <div class="container">
             <div class="content">
                 <header class="major">
@@ -92,11 +92,6 @@
                 <br />
                 <pre>{{{ $heavy->body }}}</pre>
                 <a style="border-bottom: none;" href="#modal-id-{{{ $heavy->id }}}"><button class="button">View Code</button></a>
-                <div class="remodal" data-remodal-id="modal-id-{{{ $heavy->id }}}">
-                    <button data-remodal-action="close" class="remodal-close"></button>
-                    <h1>{{{ $heavy->title }}}</h1>
-                    <p>{!! $heavy->code !!}</p>
-                </div>
                 <div class="remodal" data-remodal-id="modal-id-{{{ $heavy->id }}}">
                     <button data-remodal-action="close" class="remodal-close"></button>
                     <h1>{{{ $heavy->title }}}</h1>
@@ -110,7 +105,7 @@
                     </label>
                 </div>
             </div>
-            <a href="#a{{{ $i + 1  }}}" class="goto-next scrolly">Next</a>
+            <a href="#b{{{ $i + 1  }}}" class="goto-next scrolly">Next</a>
         </div>
     </section>
 <?php $i += 1; ?>

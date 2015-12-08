@@ -49,7 +49,7 @@
             <button data-remodal-action="close" class="remodal-close"></button>
             <h1>{{{ $feather->title }}}</h1>
                 <strong>Tokens: {{{ $feather->tokens }}}</strong>
-                <div style="overflow-x:scroll; text-align: left;" class="well"><pre>{!! $feather->code !!}</pre></div>
+                <div style="overflow-x: scroll; text-align: left;" class="well"><pre>{!! $feather->code !!}</pre></div>
             </div>
             <div style="margin-top: 5px;" class="radio">
                 <label>
@@ -101,7 +101,7 @@
                     <button data-remodal-action="close" class="remodal-close"></button>
                     <h1>{{{ $heavy->title }}}</h1>
                     <strong>Tokens: {{{ $heavy->tokens }}}</strong>
-                    <div style="overflow-x:scroll; text-align: left;" class="well"><pre>{!! $heavy->code !!}</pre></div>
+                    <div style="overflow-x: scroll; text-align: left;" class="well"><pre>{!! $heavy->code !!}</pre></div>
                 </div>
                 <div style="margin-top: 5px;" class="radio">
                 Tokens: {{{ $heavy->tokens }}}

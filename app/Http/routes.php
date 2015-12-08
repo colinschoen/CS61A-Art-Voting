@@ -19,11 +19,13 @@ Route::post('/', ["as" => "submitvote", "uses" => "IndexController@post_submit_v
 
 //Admin Routes
     //GET
-//    Route::get('admin', ["as" => "admin", "uses" => "AdminController@get_admin"]);
-//    Route::get('admin/entries', ["as" => "adminentries", "uses" => "AdminController@get_admin"]);
-//    Route::get('admin/results', ["as" => "adminresults", "uses" => "AdminController@get_admin"]);
+    Route::get('admin', ["as" => "admin", "uses" => "AdminController@get_admin"]);
+    Route::get('admin/entries', ["as" => "adminentries", "uses" => "AdminController@get_admin"]);
+    Route::get('admin/entry/edit/{id}', ["as" => "adminentryedit", "uses" => "AdminController@get_entry_edit"]);
+    Route::get('admin/results', ["as" => "adminresults", "uses" => "AdminController@get_admin"]);
     //POST
-//    Route::post('admin/entries/new', ["as" => "adminresultnew", "uses" => "AdminController@post_entry_new"]);
+    Route::post('admin/entries/new', ["as" => "adminresultnew", "uses" => "AdminController@post_entry_new"]);
+    Route::post('admin/entry/edit/{id}', ["as" => "adminentryeditsave", "uses" => "AdminController@post_entry_edit"]);
 
 
 Route::controllers([

@@ -11,10 +11,12 @@
     <!--[if lte IE 9]><link rel="stylesheet" href="/css/ie9.css" /><![endif]-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.4.0/animate.min.css" />
+    <link rel="stylesheet" href="/css/remodal.css" />
+    <link rel="stylesheet" href="/css/remodal-default-theme.css" />
     <link rel="stylesheet" href="/css/app.css" />
 </head>
 <body style="background-image: url('/images/random_grey_variations.png'); background-repeat: repeat">
-
+<div class="remodal-bg"></div>
 <section id="header">
     <header class="major">
         <h1 class="text-shadow">Scheme Recursive Art Contest <br />

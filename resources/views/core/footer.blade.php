@@ -26,9 +26,11 @@
     </footer>
 </section>
 
+
 <!-- Scripts -->
 <script src="/js/jquery.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery.lazy/0.6.4/jquery.lazy.min.js"></script>
+<script src="/js/remodal.min.js"></script>
 <script src="/js/jquery.scrollex.min.js"></script>
 <script src="/js/jquery.scrolly.min.js"></script>
 <script src="/js/skel.min.js"></script>

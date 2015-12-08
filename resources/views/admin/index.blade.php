@@ -75,23 +75,29 @@
                 <thead>
                 <tr>
                     <th>ID</th>
+                    <th>Name</th>
                     <th>Email</th>
                     <th>Title</th>
                     <th>Body</th>
+                    <th>Tokens</th>
                     <th>Category</th>
                     <th>Image</th>
                     <th>Created At</th>
+                    <th>Edit</th>
                 </tr>
                 </thead>
                 <tbody>
                 @foreach ($entries as $entry)
                 <tr><td>{{{ $entry->id }}}</td>
+                    <td>{{{ $entry->name }}}</td>
                     <td>{{{ $entry->email }}}</td>
                     <td>{{{ $entry->title }}}</td>
                     <td>{{{ $entry->body }}}</td>
+                    <td>{{{ $entry->tokens }}}</td>
                     <td>@if ($entry->category == 0) Feather Weight @else Heavy Weight @endif</td>
                     <td><a href="/artwork/{{{ $entry->image }}}" target="_blank">{{{ route("index") }}}/artwork/{{{ $entry->image }}}</a></td>
                     <td>{{{ $entry->created_at }}}</td>
+                    <td><a href="{{{ route("adminentryedit", $entry->id) }}}"><i class="fa fa-edit fa-fw"></i></a></td>
                 </tr>
                 @endforeach
                 </tbody>

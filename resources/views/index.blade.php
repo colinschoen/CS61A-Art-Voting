@@ -44,7 +44,14 @@
             <img class="lazy" style="max-width:100%;" data-src="/artwork/{{{ $feather->image }}}">
             <br />
             <pre>{{{ $feather->body }}}</pre>
-            <div class="radio">
+            <a style="border-bottom: none;" href="#modal-id-{{{ $feather->id }}}"><button class="button">View Code</button></a>
+            <div class="remodal" data-remodal-id="modal-id-{{{ $feather->id }}}">
+            <button data-remodal-action="close" class="remodal-close"></button>
+            <h1>{{{ $feather->title }}}</h1>
+                <strong>Tokens: {{{ $feather->tokens }}}</strong>
+                <div style="overflow-x:scroll; text-align: left;" class="well"><pre>{!! $feather->code !!}</pre></div>
+            </div>
+            <div style="margin-top: 5px;" class="radio">
                 <label>
                     <input type="radio" name="inputFeather" value="{{{ $feather->id }}}" /> <i class="fa fa-hand-o-up fa-fw"></i> Feather Weight Vote
                 </label>
@@ -84,7 +91,20 @@
                 <img class="lazy" style="max-width:100%;" data-src="/artwork/{{{ $heavy->image }}}">
                 <br />
                 <pre>{{{ $heavy->body }}}</pre>
-                <div class="radio">
+                <a style="border-bottom: none;" href="#modal-id-{{{ $heavy->id }}}"><button class="button">View Code</button></a>
+                <div class="remodal" data-remodal-id="modal-id-{{{ $heavy->id }}}">
+                    <button data-remodal-action="close" class="remodal-close"></button>
+                    <h1>{{{ $heavy->title }}}</h1>
+                    <p>{!! $heavy->code !!}</p>
+                </div>
+                <div class="remodal" data-remodal-id="modal-id-{{{ $heavy->id }}}">
+                    <button data-remodal-action="close" class="remodal-close"></button>
+                    <h1>{{{ $heavy->title }}}</h1>
+                    <strong>Tokens: {{{ $heavy->tokens }}}</strong>
+                    <div style="overflow-x:scroll; text-align: left;" class="well"><pre>{!! $heavy->code !!}</pre></div>
+                </div>
+                <div style="margin-top: 5px;" class="radio">
+                Tokens: {{{ $heavy->tokens }}}
                     <label>
                         <input type="radio" name="inputHeavy" value="{{{ $heavy->id }}}" /> <i class="fa fa-hand-o-up fa-fw"></i> Heavy Weight Vote
                     </label>

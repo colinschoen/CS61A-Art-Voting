@@ -61,7 +61,7 @@
     <div class="container">
         <div class="content">
             <header class="major">
-                <h2>Heavy Weight</h2>
+                <h2>Heavy Weight Winners</h2>
             </header>
             <p>Eligible entries contained at most <strong>2048</strong> tokens of Scheme, not including comments or delimiters.</p>
             @if (count($heavyResults) == 0)

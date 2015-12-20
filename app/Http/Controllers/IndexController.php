@@ -3,6 +3,7 @@
 use App\Entry;
 use Request;
 use App\Vote;
+use DB;
 
 class IndexController extends Controller {
 
@@ -34,6 +35,34 @@ class IndexController extends Controller {
         $feathers = Entry::where("category", "=", "0")->get();
         $heavies = Entry::where("category", "=", "1")->get();
         return view("index")->with(["feathers" => $feathers, "heavies" => $heavies]);
+    }
+
+
+    /**
+     * Serve the winners page to the user
+     *
+     * @return Response
+     */
+    public function get_winners()
+    {
+        //Let's get our results
+        $featherResults = DB::table("votes")
+            ->join("submissions", "votes.submission", "=", "submissions.id")
+            ->select(DB::raw("votes.submission as id, submissions.image as image, submissions.title as title, submissions.name as name, submissions.tokens as tokens, submissions.code as code, submissions.body as body, count(*) as total"))
+            ->where("submissions.category", "=", 0) //<-- This is for feather weight
+            ->groupBy("submission")
+            ->orderBy(DB::raw("total"), "DESC")
+            ->take(3) //<-- We only  care about the top 3 winners
+            ->get();
+        $heavyResults = DB::table("votes")
+            ->join("submissions", "votes.submission", "=", "submissions.id")
+            ->select(DB::raw("votes.submission as id, submissions.image as image, submissions.title as title, submissions.name as name, submissions.tokens as tokens, submissions.code as code, submissions.body as body, count(*) as total"))
+            ->where("submissions.category", "=", 1) //<-- This is for heavy weight
+            ->groupBy("submission")
+            ->orderBy(DB::raw("total"), "DESC")
+            ->take(3) //<-- We only  care about the top 3 winners
+            ->get();
+        return view("winners")->with(["featherResults" => $featherResults, "heavyResults" => $heavyResults]);
     }
 
     /**

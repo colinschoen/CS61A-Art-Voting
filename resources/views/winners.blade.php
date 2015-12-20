@@ -99,4 +99,4 @@
     </section>
 <?php $i += 1; ?>
 @endforeach
-@include('core.footer')
+@include('core.footer_novote')

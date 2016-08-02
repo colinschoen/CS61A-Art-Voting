@@ -81,7 +81,7 @@ class IndexController extends Controller {
         $courses = json_decode($json);
         $enrolled = false;
         foreach ($courses as $course) {
-            if ($course->year == 2015 && $course->term == "fall") {
+            if ($course->year == 2016 && $course->term == "summer") {
                 $enrolled = true;
             }
         }

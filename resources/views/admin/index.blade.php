@@ -35,6 +35,18 @@
                                 </div>
                             </div>
                             <div class="form-group">
+                                <label for="inputCode" class="col-lg-2 control-label">Code</label>
+                                <div class="col-lg-10">
+                                    <textarea rows="8" class="form-control" name="inputCode" placeholder="Code" id="inputCode"></textarea>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="inputTokens" class="col-lg-2 control-label">Tokens</label>
+                                <div class="col-lg-10">
+                                    <input type="text" class="form-control" id="inputTokens" name="inputTokens" placeholder="Tokens" />
+                                </div>
+                            </div>
+                            <div class="form-group">
                                 <label class="col-lg-2 control-label">Category</label>
                                 <div class="col-lg-10">
                                     <div class="radio">

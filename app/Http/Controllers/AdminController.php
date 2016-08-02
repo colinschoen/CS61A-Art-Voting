@@ -55,6 +55,7 @@ class AdminController extends Controller {
             "name" => "required",
             "email" => "required|email",
             "category" => "required|in:0,1",
+            "tokens" => "integer",
             "image" => "image",
             "title" => "required",
         ]);
@@ -92,10 +93,12 @@ class AdminController extends Controller {
             "email" => $input["inputEmail"],
             "category" => $input["inputCategory"],
             "image" => $image,
+            "tokens" => $input["inputTokens"],
             "title" => $input["inputTitle"],
         ], [
             "email" => "required|email",
             "category" => "required|in:0,1",
+            "tokens" => "integer",
             "image" => "required|image",
             "title" => "required",
         ]);
@@ -109,6 +112,8 @@ class AdminController extends Controller {
         $entry->category = $input["inputCategory"];
         $entry->title = $input["inputTitle"];
         $entry->body = $input["inputBody"];
+        $entry->code = $input["inputCode"];
+        $entry->tokens = $input["inputTokens"];
         //Save our new checkin
         $entry->save();
         $id = $entry->id;
